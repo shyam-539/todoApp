@@ -1,0 +1,80 @@
+/* Modern Font from Google Fonts */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color, #f8f9fa);
+    color: var(--text-color, #333);
+}
+
+/* Dark Mode Variables */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --task-bg: #f8f9fa;
+}
+
+[data-theme="dark"] {
+    --bg-color: #333;
+    --text-color: #ffffff;
+    --task-bg: #555;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.card {
+    border-radius: 15px;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border: none;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+/* Task List Styling */
+ul.list-group li {
+    background-color: var(--task-bg);
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+ul.list-group li:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+ul.list-group li.completed {
+    text-decoration: line-through;
+    background-color: #dcdcdc;
+    color: #6c757d;
+}
+
+ul.list-group li {
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Alert Styling */
+.alert {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
